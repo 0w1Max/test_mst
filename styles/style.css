@@ -18,15 +18,18 @@ h1, h2, h3, ul, li {
   display: flex;
 }
 
-.header__container {
+.container {
   display: flex;
-  justify-content: flex-start;
-  gap: 210px;
-  max-width: 1600px;
+  max-width: var(--container-width);
   width: 100%;
   margin: 0 auto;
-  padding: 38px;
-  padding-left: 65px;
+}
+
+.header__container {
+  justify-content: flex-start;
+  gap: 210px;
+  padding-top: 35px;
+  padding-left: 26px;
 }
 
 .header__logo {
@@ -39,7 +42,7 @@ h1, h2, h3, ul, li {
   text-decoration: none;
 }
 
-.header__logo > .header__logo--link >.header__logo--text {
+.header__logo--link >.header__logo--text {
   font-family: 'Prata';
   font-size: 36px;
   text-transform: uppercase;
@@ -52,11 +55,12 @@ h1, h2, h3, ul, li {
 
 .header__nav--list {
   display: flex;
+  gap: 25px;
   list-style: none;
 }
 
 .header__nav--list > .header__nav--item:not(:last-child) {
-  margin-right: 10px;
+  
 }
 
 .header__nav--item > .header__nav--link {
@@ -65,8 +69,63 @@ h1, h2, h3, ul, li {
   color: var(--link-color);
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .header__nav--item > .header__nav--link:hover {
   color: var(--hover-color);
+}
+
+.main {
+  display: flex;
+}
+
+.main__container {
+  
+}
+
+.main__description {
+  
+}
+
+.main__description > .main__description--title {
+  font-family: 'Prata';
+  font-size: 80px;
+}
+
+.main__description > .main__description--subtitle {
+  font-size: 50px;
+}
+
+.main__description--list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.main__description--list > .main__description--item {
+  display: flex;
+}
+
+.main__description--list > .main__description--item::before {
+  content: '';
+  width: 39px;
+  height: 37px;
+  background: url('../images/icons/hero.svg');
+}
+
+.main__description--item > .main__description--text {
+  font-size: 24px;
+}
+
+.main__description--item > .main__description--text .highlight {
+  font-family: 'Prata';
+  font-size: 40px;
+}
+
+.main__description--button {
+  padding: 32px 50px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
