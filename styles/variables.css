@@ -5,6 +5,13 @@
   --link-color: #fff;
   --hover-color: #999;
   --line-color: #55565A;
+  --first-button-bg: #fff;
+  --second-button-bg: #282829;
+  --first-button-color: #282829;
+  --second-button-color: #fff;
+  --form-title-color: #38535D;
+  --form-text-color: #282829;
+  --form-border-color: #D6D6D6;
 
   --container-width: 1600px;
 }

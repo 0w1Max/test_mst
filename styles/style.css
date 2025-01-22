@@ -20,6 +20,12 @@ h1, h2, h3, ul, li, p {
   margin: 0 auto;
 }
 
+.button {
+  text-transform: uppercase;
+  border: 0px;
+  border-radius: 4px;
+}
+
 .header {
   display: flex;
   width: 100%;
@@ -145,9 +151,8 @@ main {
   padding: 33px 52px;
   font-size: 24px;
   font-weight: bold;
-  text-transform: uppercase;
-  border: 0px;
-  border-radius: 4px;
+  color: var(--first-button-color);
+  background-color: var(--first-button-bg);
 }
 
 .description__img {
@@ -233,7 +238,84 @@ main {
   padding: 27px 270px;
   font-size: 20px;
   font-weight: bold;
-  text-transform: uppercase;
-  border: 0px;
+  color: var(--first-button-color);
+  background-color: var(--first-button-bg);
+}
+
+.main__form {
+  padding-top: 97px;
+  background-color: var(--second-bg-color);
+}
+
+.main__form-content {
+  position: relative;
+  display: flex;
+  margin-left: 11px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 30px;
+}
+
+.form-content {
+  padding: 67px 134px;
+}
+
+.form-content > .form-content__title {
+  max-width: 410px;
+  font-family: 'Prata';
+  font-size: 54px;
+  line-height: 64px;
+  color: var(--form-title-color);
+}
+
+.form__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.form__input-wrapper > .form__input {
+  margin-bottom: 11px;
+  padding: 17px 38px;
+  font-size: 24px;
+  border: 2px solid var(--form-border-color);
   border-radius: 4px;
+}
+
+.form__checkbox-wrapper {
+  display: flex;
+  margin-top: 15px;
+}
+
+.form__checkbox-wrapper > .form__checkbox {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+}
+
+.form__checkbox-wrapper > .form__checkbox-label {
+  margin-left: 15px;
+  font-size: 19px;
+  color: var(--form-text-color);
+}
+
+.main__form-img {
+  position: absolute;
+  top: -32px;
+  right: -1px;
+}
+
+.main__form-img > img {
+  max-width: 583px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.form__button {
+  margin-top: 28px;
+  padding: 36px 306px;
+  font-size: 24px;
+  color: var(--second-button-color);
+  background-color: var(--second-button-bg);
 }
