@@ -6,15 +6,15 @@ body {
   padding: 0;
   font-family: 'Arial', sans-serif;
   color: var(--font-color);
-  background-color: var(--bg-color);
+  background-color: var(--first-bg-color);
 }
 
-h1, h2, h3, ul, li {
+h1, h2, h3, ul, li, p {
   margin: 0;
   padding: 0;
 }
 
-.container {
+.container, .wrapper {
   max-width: var(--container-width);
   width: 100%;
   margin: 0 auto;
@@ -43,12 +43,16 @@ h1, h2, h3, ul, li {
   align-items: center;
 }
 
-.header__logo > .header__logo--link {
+.header__logo > .logo__link {
   color: var(--link-color);
   text-decoration: none;
 }
 
-.header__logo--link >.header__logo--text {
+.header__logo > .logo__link:hover {
+  color: var(--hover-color);
+}
+
+.logo__link >.logo__text {
   font-family: 'Prata';
   font-size: 36px;
   text-transform: uppercase;
@@ -59,13 +63,13 @@ h1, h2, h3, ul, li {
   align-items: center;
 }
 
-.header__nav--list {
+.nav__list {
   display: flex;
   gap: 25px;
   list-style: none;
 }
 
-.header__nav--item > .header__nav--link {
+.nav__item > .nav__link {
   font-style: italic;
   font-size: 16px;
   color: var(--link-color);
@@ -74,7 +78,7 @@ h1, h2, h3, ul, li {
   letter-spacing: 1px;
 }
 
-.header__nav--item > .header__nav--link:hover {
+.nav__item > .nav__link:hover {
   color: var(--hover-color);
 }
 
@@ -82,42 +86,43 @@ main {
   /* padding-top: 100px; */
 }
 
-main > .main__container {
+.main__container {
   display: flex;
+  flex-direction: column;
 }
 
-.main__description {
+.description__content {
   max-width: 530px;
   margin-top: 217px;
   margin-left: 10px;
 }
 
-.main__description > .main__description--title {
+.description__content > .description__title {
   font-family: 'Prata';
   font-size: 80px;
   line-height: 102px;
 }
 
-.main__description > .main__description--subtitle {
+.description__content > .description__subtitle {
   font-size: 50px;
   line-height: 82px;
   letter-spacing: -2px;
 }
 
-.main__description--list {
+.description__list {
   display: flex;
   flex-direction: column;
   padding-top: 30px;
   list-style: none;
 }
 
-.main__description--list > .main__description--item {
+.description__list > .description__item {
   display: flex;
   align-items: center;
   margin-bottom: 18px;
 }
 
-.main__description--list > .main__description--item::before {
+.description__list > .description__item::before {
   content: '';
   width: 39px;
   height: 37px;
@@ -125,36 +130,110 @@ main > .main__container {
   background: url('../images/icons/hero.svg');
 }
 
-.main__description--item > .main__description--text {
+.description__item > .description__text {
   font-size: 24px;
 }
 
-.main__description--item > .main__description--text .highlight {
+.description__item > .description__text .highlight {
   margin-right: 10px;
   font-family: 'Prata';
   font-size: 40px;
 }
 
-.main__description--button {
-  margin-top: 14px;
-  padding: 32px 50px;
+.description__button {
+  margin-top: 15px;
+  padding: 33px 52px;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
+  border: 0px;
   border-radius: 4px;
 }
 
-.main__img {
+.description__img {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.main__img > img {
+.description__img > img {
   max-width: 746px;
   width: 746px;
   max-height: 1009px;
   height: auto;
   object-fit: cover;
   object-position: center;
+}
+
+.main__advantages {
+  margin-top: 50px;
+  background-color: var(--second-bg-color);
+}
+
+.advantages__content {
+  display: flex;
+  padding-top: 100px;
+}
+
+.advantages__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px;
+  list-style: none;
+}
+
+.advantages__list > .advantages__item {
+  padding: 0 54px;
+}
+
+.advantages__item > .advantages__item-text {
+  display: flex;
+  padding: 37px 0;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.advantages__item:not(:last-child) > .advantages__item-text {
+  border-bottom: 1px solid var(--line-color);
+}
+
+.advantages__item > .advantages__item-text::before {
+  content: '';
+  display: block;
+  min-width: 58px;
+  height: 47px;
+  margin-right: 20px;
+  background: url('../images/icons/advantages.svg');
+}
+
+.advantages__img > img {
+  max-width: 622px;
+  max-height: 724px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.advantages__img.advantages__img--left > img {
+  width: 724px;
+}
+
+.advantages__img.advantages__img--right > img {
+  width: 561px;
+}
+
+.advantages__button {
+  margin-top: 44px;
+  padding: 27px 270px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 0px;
+  border-radius: 4px;
 }

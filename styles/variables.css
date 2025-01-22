@@ -1,8 +1,10 @@
 :root {
-  --bg-color: #222;
+  --first-bg-color: #222;
+  --second-bg-color: #282829;
   --font-color: #fff;
   --link-color: #fff;
   --hover-color: #999;
+  --line-color: #55565A;
 
   --container-width: 1600px;
 }
