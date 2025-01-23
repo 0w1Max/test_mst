@@ -1,6 +1,10 @@
 @import url('./fonts.css');
 @import url('./variables.css');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -24,6 +28,7 @@ h1, h2, h3, ul, li, p {
   text-transform: uppercase;
   border: 0px;
   border-radius: 4px;
+  transition: 0.5s;
 }
 
 .button:hover {
@@ -58,6 +63,7 @@ h1, h2, h3, ul, li, p {
 .header__logo > .logo__link {
   color: var(--link-color);
   text-decoration: none;
+  transition: 0.5s;
 }
 
 .header__logo > .logo__link:hover {
@@ -88,6 +94,7 @@ h1, h2, h3, ul, li, p {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: 0.5s;
 }
 
 .header__nav > .nav__list > .nav__item > .nav__link:hover {
@@ -261,6 +268,7 @@ h1, h2, h3, ul, li, p {
   background-color: #fff;
   border: 0;
   border-radius: 30px;
+  overflow: hidden;
 }
 
 .form-content {
@@ -308,12 +316,12 @@ h1, h2, h3, ul, li, p {
 
 .main__form-img {
   position: absolute;
-  top: -32px;
+  top: 0;
   right: -1px;
 }
 
 .main__form-img > img {
-  max-width: 583px;
+  max-width: 528px;
   height: auto;
   object-fit: cover;
   object-position: center;
@@ -361,6 +369,7 @@ h1, h2, h3, ul, li, p {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: 0.5s;
 }
 
 .footer__nav > .nav > .nav__list > .nav__item > .nav__link:hover {
@@ -383,6 +392,7 @@ h1, h2, h3, ul, li, p {
 .footer__logo > .logo__link {
   color: var(--link-color);
   text-decoration: none;
+  transition: 0.5s;
 }
 
 .footer__logo > .logo__link:hover {
