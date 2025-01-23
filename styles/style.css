@@ -58,7 +58,7 @@ h1, h2, h3, ul, li, p {
   color: var(--hover-color);
 }
 
-.logo__link >.logo__text {
+.header__logo > .logo__link > .logo__text {
   font-family: 'Prata';
   font-size: 36px;
   text-transform: uppercase;
@@ -69,13 +69,13 @@ h1, h2, h3, ul, li, p {
   align-items: center;
 }
 
-.nav__list {
+.header__nav > .nav__list {
   display: flex;
   gap: 25px;
   list-style: none;
 }
 
-.nav__item > .nav__link {
+.header__nav > .nav__list > .nav__item > .nav__link {
   font-style: italic;
   font-size: 16px;
   color: var(--link-color);
@@ -84,7 +84,7 @@ h1, h2, h3, ul, li, p {
   letter-spacing: 1px;
 }
 
-.nav__item > .nav__link:hover {
+.header__nav > .nav__list > .nav__item > .nav__link:hover {
   color: var(--hover-color);
 }
 
@@ -205,7 +205,7 @@ main {
 }
 
 .advantages__item:not(:last-child) > .advantages__item-text {
-  border-bottom: 1px solid var(--line-color);
+  border-bottom: 1px solid var(--first-line-color);
 }
 
 .advantages__item > .advantages__item-text::before {
@@ -244,6 +244,7 @@ main {
 
 .main__form {
   padding-top: 97px;
+  padding-bottom: 103px;
   background-color: var(--second-bg-color);
 }
 
@@ -318,4 +319,167 @@ main {
   font-size: 24px;
   color: var(--second-button-color);
   background-color: var(--second-button-bg);
+}
+
+.footer__nav {
+  border-top: 2px solid var(--second-line-color);
+  border-bottom: 2px solid var(--second-line-color);
+}
+
+.footer__nav > .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+}
+
+.footer__nav > .nav > .nav__list {
+  display: flex;
+  gap: 4px;
+  margin-left: 52px;
+  list-style: none;
+}
+
+.footer__nav > .nav > .nav__list > .nav__item {
+  margin-right: 32px;
+}
+
+.footer__nav > .nav > .nav__list > .nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.footer__nav > .nav > .nav__list > .nav__item > .nav__link {
+  font-style: italic;
+  font-size: 20px;
+  color: var(--link-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer__nav > .nav > .nav__list > .nav__item > .nav__link:hover {
+  color: var(--hover-color);
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-top: 45px;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.footer__logo > .logo__link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.footer__logo > .logo__link:hover {
+  color: var(--hover-color);
+}
+
+.footer__logo > .logo__link > .logo__text {
+  font-family: 'Prata';
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.footer__social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__social-links > .social-links__list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 40px;
+  list-style: none;
+}
+
+.social-links__list > .social-links__item {
+  margin-right: 24px;
+}
+
+.social-links__list > .social-links__item > .social-links__link {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.social-links__link.link__instagram {
+  background: url('../images/icons/instagram.svg');
+}
+
+.social-links__link.link__tiktok {
+  background: url('../images/icons/tiktok.svg');
+}
+
+.social-links__link.link__linkedin {
+  background: url('../images/icons/linkedin.svg');
+}
+
+.social-links__link.link__facebook {
+  background: url('../images/icons/facebook.svg');
+}
+
+.social-links__link.link__telegram {
+  background: url('../images/icons/telegram.svg');
+}
+
+.social-links__link.link__youtube {
+  background: url('../images/icons/youtube.svg');
+}
+
+.footer__button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+
+.footer__button {
+  padding: 26px 54px;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--first-button-color);
+  background-color: var(--first-button-bg);
+}
+
+.footer__year,
+.footer__privacy,
+.footer__terms {
+  display: flex;
+  align-items: center;
+  padding-top: 18px;
+  font-size: 20px;
+}
+
+.footer__year {
+  padding-left: 10px;
+}
+
+.footer__privacy {
+  justify-content: center;
+  padding-left: 38px;
+}
+
+.footer__terms {
+  justify-content: flex-end;
+  padding-right: 14px;
+}
+
+.footer__privacy > .privacy__text,
+.footer__terms > .terms__text {
+  text-decoration: none;
+  color: var(--footer-link-color);
+}
+
+.footer__privacy > .privacy__text:hover,
+.footer__terms > .terms__text:hover {
+  color: var(--hover-color);
 }
