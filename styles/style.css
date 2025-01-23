@@ -26,6 +26,12 @@ h1, h2, h3, ul, li, p {
   border-radius: 4px;
 }
 
+.button:hover {
+  background-color: var(--hover-bg);
+  color: var(--hover-color);
+  cursor: pointer;
+}
+
 .header {
   display: flex;
   width: 100%;
@@ -88,9 +94,9 @@ h1, h2, h3, ul, li, p {
   color: var(--hover-color);
 }
 
-main {
-  /* padding-top: 100px; */
-}
+/* main {
+  padding-top: 100px;
+} */
 
 .main__container {
   display: flex;
@@ -98,7 +104,7 @@ main {
 }
 
 .description__content {
-  max-width: 530px;
+  max-width: 538px;
   margin-top: 217px;
   margin-left: 10px;
 }
