@@ -156,6 +156,7 @@
   .social-links__list > .social-links__item > .social-links__link {
     width: 24px;
     height: 24px;
+    background-size: contain;
   }
 
   .footer__button {
