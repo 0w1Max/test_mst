@@ -2,6 +2,7 @@ const body = document.querySelector('body');
 const headerElement = document.querySelector('header');
 const mainElement = document.querySelector('.main');
 const burgerMenu = document.querySelector('.nav__list--burger-menu');
+const burgerMenuLink = burgerMenu.querySelectorAll('.nav__item > .nav__link');
 const navButton = document.querySelector('.nav__button');
 const reserveElement = document.querySelector('#reserve');
 const advantagesElement = document.querySelector('#advantages');
@@ -40,3 +41,12 @@ navButton.addEventListener('click', (event) => {
   navButton.classList.toggle('open');
   burgerMenu.classList.toggle('open');
 });
+
+burgerMenuLink.forEach((link) => {
+  link.addEventListener('click', () => {
+    body.classList.toggle('hidden');
+    navButton.classList.toggle('close');
+    navButton.classList.toggle('open');
+    burgerMenu.classList.toggle('open');
+  })
+})
