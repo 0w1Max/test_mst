@@ -1,13 +1,19 @@
 const body = document.querySelector('body');
-const header = document.querySelector('header');
+const headerElement = document.querySelector('header');
+const mainElement = document.querySelector('.main');
 const burgerMenu = document.querySelector('.nav__list--burger-menu');
 const navButton = document.querySelector('.nav__button');
+const reserveElement = document.querySelector('#reserve');
+const advantagesElement = document.querySelector('#advantages');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
-      header.classList.add('header--sticky');
+    headerElement.classList.add('header--sticky');
+    reserveElement.style.paddingTop = '200px';
   } else {
-      header.classList.remove('header--sticky');
+    mainElement.style.marginTop = '0';
+    headerElement.classList.remove('header--sticky');
+    reserveElement.style.paddingTop = '0';
   }
 });
 
